@@ -1,3 +1,4 @@
+// Header file for BedWetter main program
 
 #ifndef print2digits_h
 #include "Arduino.h"
@@ -31,10 +32,14 @@ Servo servo2;     // defines servo2 using Arduino function for servos
 int pos1 = 95;    // defines the 95 degree position on the servo as the variable pos1
 int pos2 = 0;     // defines the 0 degree position on the servo as the variable pos2
 
-void print2digits(int number) {   // void made to create double digit numbers out of all numbers
-  if (number >= 0 && number < 10) { // if the number is a single digit, put a "0 before it            *in order to keep all numbers as double digits for uniformity*
+void print2digits(int number) // void made to create double digit numbers out of all numbers
+{   
+  if (number >= 0 && number < 10) // if the number is a single digit, put a "0 before it     *to keep all numbers as double digits for uniformity*
+  { 
     lcd.print('0'); // prints a 0 before the number
   }
+  
   lcd.print(number); // prints the number after the 0
 }
 #endif
+
